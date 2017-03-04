@@ -57,10 +57,18 @@ class color_2 {
 		return sum;
 	}
 }
-/* Конвертирует полученные числа в код RGB */
+/* Конвертирует полученные числа в код HSL */
 class convert_color {
 	constructor(val1, val2){
 		this.val1 = val1;
 		this.val2 = val2;
+		this.val3 = val2/val1;
 	}
+	get hsl_color() {
+		return `${this.val1} ${this.val2} ${this.val3}`;
+	}
+  	set hsl_color(newValue) {
+    		[this.val1, this.val2, this.val3] = ['hsl('+this.val1, this.val2+'%', this.val3+'%)'];
+		[this.val1, this.val2, this.val3] = newValue.split(', ');
+  	}
 }
