@@ -6,6 +6,10 @@ angular.module('zotovscript', [])
        var st1 = color_1.value_name();
        let color_2 = new color_2($scope.date);
        var st2 = color_2.value_date_of_brith();
+        let convert_color =  new convert_color(st1, st2);
+        
+        var ch_gr = angular.element(document.querySelector(".gr_square"));
+        ch_gr.css("background_image", "convert_color.hsl_color");
      } else {
        $scope.result = "Заполните все поля.";
    }
