@@ -20,5 +20,9 @@ angular.module('zotovscript', [])
 // JqueryUI
 $( function() {
     $( "#data" ).datepicker();
-  } );
+    $( "input[type=submit], a, button" ).button();
+    $( "button, input, a" ).click( function( event ) {
+      event.preventDefault();
+    } );
+ } );
    
