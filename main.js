@@ -1,3 +1,4 @@
+// AngularJS контроллер
 angular.module('zotovscript', [])
 .controller('MyController', ['$scope', function($scope) {
    $scope.retran = function() {
@@ -15,3 +16,9 @@ angular.module('zotovscript', [])
        $scope.result = "Заполните все поля.";
    }
 }]);
+   
+// JqueryUI
+$( function() {
+    $( "#data" ).datepicker();
+  } );
+   
