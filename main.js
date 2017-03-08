@@ -10,6 +10,7 @@ angular.module('zotovscript', [])
         
         var ch_gr = angular.element(document.querySelector(".gr_square"));
         ch_gr.css("background_image", "convert_color.hsl_color");
+        $scope.result ="Число вашего имени:"+st1+" Число вашей даты рождения:"+st2;
      } else {
        $scope.result = "Заполните все поля.";
    }
